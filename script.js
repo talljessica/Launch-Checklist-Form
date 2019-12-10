@@ -27,7 +27,6 @@ window.addEventListener("load", function(){
 <img src="${json[0].image}">`
 });
 });
-// });
 let form = this.document.getElementById("form");
 let pilotNameInput = document.querySelector("input[name=pilotName]");
 let copilotNameInput = document.querySelector("input[name=copilotName]");
@@ -58,9 +57,6 @@ else if (isNaN(cargoMassInput.value)){
    alert("Invalid input. Cargo mass value must be a number")
    event.preventDefault();
 }
-});
-
-formSubmit.addEventListener("click", function(){
    faultyItems.style.visibility = "visible";
    pilotStatusUpdate.innerHTML =`Pilot ${pilotNameInput.value} is ready for launch`;
    copilotStatusUpdate.innerHTML = `Co-Pilot ${copilotNameInput.value} is ready for launch`;
@@ -90,4 +86,3 @@ if (fuelLevelInput.value > 10000 && cargoMassInput.value < 10000){
 };
 });
 });
-// });
